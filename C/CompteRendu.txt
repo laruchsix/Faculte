@@ -1,0 +1,51 @@
+TP 6 
+
+exo 3: 
+a ) 
+Création d'un tube :
+$ mkfifo montube
+
+b ) 
+Lecture du tube : 
+$ cat < montube
+
+Ecriture dans le tube :
+$ cat > montube
+
+Lors de d'ecriture , chaque ligne renvoie a un terminal, la lecture ce fait par ligne.
+
+c ) A la fermeture de l'écrivain, les deux l'ecteurs s'arretent. 
+Le tube existe toujours dans le fichier.
+
+d ) 
+$ echo bonjour > montube
+Après cette comande le terminal se bloque.
+
+Une fois que je lecteur est lancé, le "bonjour" s'affiche le echo se termine , l'écrivaint s'arrete -> le lecteur s'arrete aussi.
+
+e ) 
+Commande pour effacer le tube
+$ rm montube
+
+exo 4 : 
+Lors de l'execution du programme si le lecteur n'est pas ouvert l'ouverture est bloquante
+
+le write se stop si le lecteur n'est pas ouvret
+
+a ) Le programme d'ecriture fonctionne bien avec un autre terminal ouvert sur la lecture
+
+
+b ) Le programme de lecture fonctionne bien avec un autre terminal ouvert sur l'écriture
+
+c ) les programmes fonctionne une fois qu'ils sont ouvert chacun sur un terminal, a condition d'éxecuter l'écrivain en premier.
+
+d ) Une fois le tube suprimer physiquement l'écriture et la lecture est encore possible ! 
+peux etre q'une fois la liaison entre la lecture et l'écriture, les programmes communiquent directement.
+pourquoi je ne sais pas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+exo 5 : 
+je ne sais pas comment le paire connait la longueur de la chaine de caratère.
+je l'ai fait lire charatere par charatère jusqu'a ce qu'il trouve un '&' de la même manière du dernier exercice.
+
+exo 6 : 
+

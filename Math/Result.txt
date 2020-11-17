@@ -1,0 +1,2 @@
+Voici la somme des entiers : 47
+La moyenne des entiers entés : 15.666667
