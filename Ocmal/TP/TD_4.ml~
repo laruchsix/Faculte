@@ -1,0 +1,28 @@
+let rec whilellop(r, const, suiv : 'a  * ( 'a -> bool ) * ('a -> 'a)) : 'a =
+  if not(cont(r))
+  then r
+  else whileloop(suiv(r), const, suiv)
+;;
+
+let sup( nn, vv : int * int) : int * int=
+  
+;;
+
+
+
+
+
+(* ----------------------- 4 ---------------------------- *)
+
+let factwhile ( n : int ) : int =
+  let nn : int ref = ref 1
+  and vv : int ref = ref 1
+  in
+  while !nn > 0
+  do
+    vv := !nn * !vv;
+    nn := !nn - 1;
+  done;
+  !vv;
+  
+;;

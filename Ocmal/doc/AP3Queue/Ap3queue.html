@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Ap3queue" rel="Chapter" href="Ap3queue.html"><link title="Constructor functions" rel="Section" href="#7_Constructorfunctions">
+<link title="Selector functions" rel="Section" href="#7_Selectorfunctions">
+<link title="Predicate" rel="Section" href="#7_Predicate">
+<title>Ap3queue</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Ap3queue.html">Ap3queue</a></h1>
+
+<pre><span class="keyword">module</span> Ap3queue: <code class="code">sig</code> <a href="Ap3queue.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Queue abstract data type for AP3 course<br>
+<b>Author(s):</b> Laurent Fuchs<br>
+</div>
+<hr width="100%">
+<br>
+This library implements the usual abstract data type for queues<br>
+
+<pre><span id="TYPEt_queue"><span class="keyword">type</span> <code class="type">+'a</code> t_queue</span> </pre>
+<div class="info ">
+type for polymorphic queues<br>
+</div>
+
+<br>
+<div class="h7" id="7_Constructorfunctions">Constructor functions</div><br>
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">unit -> 'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a></code></pre><div class="info ">
+Empty queue constant<br>
+</div>
+
+<pre><span id="VALenter"><span class="keyword">val</span> enter</span> : <code class="type">'a * 'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a> -> 'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a></code></pre><div class="info ">
+Enter a value into a queue<br>
+</div>
+<br>
+<div class="h7" id="7_Selectorfunctions">Selector functions</div><br>
+
+<pre><span id="VALqhd"><span class="keyword">val</span> qhd</span> : <code class="type">'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a> -> 'a</code></pre><div class="info ">
+Head value of a queue
+<p>
+<b>Semantics</b> <ul>
+<li>qhd(empty) = Invalid_argument</li>
+<li>qhd(enter(v, empty())) = v   </li>
+<li>qhd(enter(v, q)) = qhd(v) if not(isEmpty(q))</li>
+</ul>
+<br>
+<b>Raises</b> <code>Invalid_argument</code> when the queue is empty<br>
+</div>
+
+<pre><span id="VALqrest"><span class="keyword">val</span> qrest</span> : <code class="type">'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a> -> 'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a></code></pre><div class="info ">
+Return a queue without the head of the queue given in argument
+<p>
+<b>Semantics</b> <ul>
+<li>qrest(empty()) = Invalid_argument</li>
+<li>qrest(enter(v, empty())) = empty()</li>
+<li>qrest(enter(v, q)) = enter(v, qrest(q)) if not (isEmpty(q))</li>
+</ul>
+<br>
+<b>Raises</b> <code>Invalid_argument</code> when the queue is empty<br>
+</div>
+<br>
+<div class="h7" id="7_Predicate">Predicate</div><br>
+
+<pre><span id="VALisEmpty"><span class="keyword">val</span> isEmpty</span> : <code class="type">'a <a href="Ap3queue.html#TYPEt_queue">t_queue</a> -> bool</code></pre><div class="info ">
+<b>Semantics</b> <ul>
+<li>isEmpty(empty()) = true  </li>
+<li>isEmpty(enter(v, q)) = false</li>
+</ul>
+<br>
+</div>
+</body></html>

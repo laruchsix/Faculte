@@ -1,0 +1,25 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Gtree" rel="Chapter" href="Gtree.html"><title>Gtree</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;+<span class="keywordsign">'</span>a&nbsp;t_gtree<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;+<span class="keywordsign">'</span>a&nbsp;t_forest<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;f_empty&nbsp;:&nbsp;unit&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;rooting&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;insert&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;root&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;sons&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;eldest&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;brothers&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;f_isEmpty&nbsp;:&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_forest&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;show&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string)&nbsp;*&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;show_int_gtree&nbsp;:&nbsp;int&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;show_string_gtree&nbsp;:&nbsp;string&nbsp;<span class="constructor">Gtree</span>.t_gtree&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+<span class="keyword">end</span></code></body></html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Ap3stack" rel="Chapter" href="Ap3stack.html"><link title="Constructor functions" rel="Section" href="#7_Constructorfunctions">
+<link title="Predicate" rel="Section" href="#7_Predicate">
+<title>Ap3stack</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Ap3stack.html">Ap3stack</a></h1>
+
+<pre><span class="keyword">module</span> Ap3stack: <code class="code">sig</code> <a href="Ap3stack.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Stack abstract data type for AP3 course<br>
+<b>Author(s):</b> Laurent Fuchs<br>
+</div>
+<hr width="100%">
+<br>
+This library implements the usual abstract data type for stacks<br>
+
+<pre><span id="TYPEt_stack"><span class="keyword">type</span> <code class="type">+'a</code> t_stack</span> </pre>
+<div class="info ">
+type for polymorphic stacks<br>
+</div>
+
+<br>
+<div class="h7" id="7_Constructorfunctions">Constructor functions</div><br>
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type">unit -> 'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a></code></pre><div class="info ">
+Empty stack constant<br>
+</div>
+
+<pre><span id="VALpush"><span class="keyword">val</span> push</span> : <code class="type">'a * 'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a> -> 'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a></code></pre><div class="info ">
+Push a value into a stack
+<p>
+<div class="h7" id="7_Selectorfunctions">Selector functions</div><br>
+</div>
+
+<pre><span id="VALtop"><span class="keyword">val</span> top</span> : <code class="type">'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a> -> 'a</code></pre><div class="info ">
+Top value of a stack
+<p>
+<b>Semantics</b> <ul>
+<li>top(empty()) = Invalid_argument  </li>
+<li>top(push(v, q)) = v</li>
+</ul>
+<br>
+<b>Raises</b> <code>Invalid_argument</code> when the stack is empty<br>
+</div>
+
+<pre><span id="VALpop"><span class="keyword">val</span> pop</span> : <code class="type">'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a> -> 'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a></code></pre><div class="info ">
+Pop the top value of a stack
+<p>
+<b>Semantics</b> <ul>
+<li>pop(empty()) = Invalid_argument  </li>
+<li>pop(push(v, q)) = q</li>
+</ul>
+<br>
+<b>Raises</b> <code>Invalid_argument</code> when the stack is empty<br>
+</div>
+<br>
+<div class="h7" id="7_Predicate">Predicate</div><br>
+
+<pre><span id="VALisEmpty"><span class="keyword">val</span> isEmpty</span> : <code class="type">'a <a href="Ap3stack.html#TYPEt_stack">t_stack</a> -> bool</code></pre><div class="info ">
+<b>Semantics</b> <ul>
+<li>isEmpty(empty()) = true  </li>
+<li>isEmpty(push(v, q)) = false</li>
+</ul>
+<br>
+</div>
+</body></html>
