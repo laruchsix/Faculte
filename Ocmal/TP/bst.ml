@@ -60,6 +60,13 @@ let rec bst_delete( v , abr : int * int t_btree) : int t_btree =
      let (value,fg,fd) : (int * int t_btree * int t_btree) = root(abr) , lson(abr) , rson(abr) in
      if v = value
      then
-       if (isEmpty(fg) || isEmpty(fd))
-          else 
+       if isEmpty(fg) && isEmpty(fd)
+       then 
+       else 
+          if  isEmpty(fg) || isEmpty(fd)
+          then 
+            if isEmpty(fg)
+            then fg
+            else fd
+          else empty()
 ;;
